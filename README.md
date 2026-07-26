@@ -1,50 +1,172 @@
-# Welcome to your Expo app 👋
+# MindGuard AI
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+An AI-powered mental wellness application designed to help users monitor emotional well-being, access supportive resources, and encourage healthier daily habits through an intuitive mobile experience.
 
-## Get started
+---
 
-1. Install dependencies
+## Overview
 
-   ```bash
-   npm install
-   ```
+MindGuard AI is a mobile application developed to promote mental wellness using artificial intelligence and modern mobile technologies. The application provides users with an interactive platform to better understand their emotional health while maintaining a simple, accessible, and user-friendly experience.
 
-2. Start the app
+Built using React Native and a scalable backend architecture, MindGuard AI demonstrates full-stack mobile development, API integration, and AI-assisted healthcare concepts.
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## Features
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- AI-powered mental wellness assistance
+- Interactive chatbot support
+- Mood tracking and monitoring
+- Daily wellness journaling
+- Mental health resources
+- Secure user authentication
+- Cross-platform mobile application
+- Backend API integration
+- Responsive and intuitive user interface
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## Tech Stack
 
-When you're ready, run:
+### Mobile Application
 
-```bash
-npm run reset-project
+- React Native
+- Expo
+- JavaScript
+
+### Backend
+
+- Node.js
+- Express.js
+
+### Database
+
+- MongoDB
+
+### Tools
+
+- Git
+- GitHub
+- VS Code
+- Postman
+
+---
+
+## Project Structure
+
+```text
+MindGuard-AI/
+│
+├── app/
+├── assets/
+├── backend/
+├── components/
+├── constants/
+├── hooks/
+├── screens/
+├── services/
+├── scripts/
+├── app.js
+├── package.json
+└── README.md
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## Installation
 
-To learn more about developing your project with Expo, look at the following resources:
+### Clone the repository
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+git clone https://github.com/Dikshitha-Rasineni/MindGuard-AI.git
+```
 
-## Join the community
+### Navigate to the project
 
-Join our community of developers creating universal apps.
+```bash
+cd MindGuard-AI
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start the application
+
+```bash
+npm start
+```
+
+---
+
+## Application Workflow
+
+1. User registers or logs in securely.
+2. The application provides access to wellness tools.
+3. Users can track moods and maintain daily journals.
+4. AI-assisted features provide supportive interactions.
+5. Data is managed through backend APIs and securely stored.
+
+---
+
+## Objectives
+
+- Promote awareness of mental wellness.
+- Provide accessible AI-assisted support.
+- Encourage healthy daily habits.
+- Demonstrate modern full-stack mobile application development.
+- Build a scalable healthcare-focused application.
+
+---
+
+## Future Improvements
+
+- Personalized AI recommendations
+- Voice-based chatbot support
+- Emotion detection using facial expressions
+- Therapist appointment integration
+- Emergency SOS feature
+- Wearable device integration
+- Daily wellness reminders
+- Analytics dashboard
+- Cloud deployment
+
+---
+
+## Learning Outcomes
+
+This project strengthened my understanding of:
+
+- React Native mobile development
+- Backend API development
+- Database integration
+- Full-stack application architecture
+- Authentication and security
+- AI-assisted application design
+- Git and GitHub collaboration
+
+---
+
+## Achievement
+
+MindGuard AI was developed as part of a hackathon project, showcasing rapid problem-solving, teamwork, and end-to-end application development within a limited timeframe.
+
+---
+
+## Author
+
+**Dikshitha Rasineni**
+
+B.Tech Computer Science and Engineering (AI & ML)
+
+SRM Institute of Science and Technology
+
+GitHub: https://github.com/Dikshitha-Rasineni
+
+---
+
+## License
+
+This project is licensed under the MIT License.
