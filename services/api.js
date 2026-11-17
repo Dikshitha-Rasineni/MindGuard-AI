@@ -1,9 +1,17 @@
 import axios from 'axios';
+import { Platform } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const BASE_URL = 'http://172.20.10.5:3000';
+// Where the backend lives:
+// - EXPO_PUBLIC_API_URL wins if set (e.g. https://mindguard-ai.vercel.app/api for the phone app,
+//   or http://localhost:3000 when running `npm run web` against a local backend).
+// - On the hosted website the API is on the same domain under /api.
+// - Otherwise (Expo Go on a phone, no env set) fall back to the laptop's LAN address.
+const BASE_URL =
+  process.env.EXPO_PUBLIC_API_URL ||
+  (Platform.OS === 'web' ? '/api' : 'http://172.20.10.5:3000');
 
-const api = axios.create({ baseURL: BASE_URL });
+const api = axios.create({ baseURL: BASE_URL, timeout: 20000 });
 
 api.interceptors.request.use(async (config) => {
   const token = await AsyncStorage.getItem('token');

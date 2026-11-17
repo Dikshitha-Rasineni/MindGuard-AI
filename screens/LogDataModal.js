@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Modal, StyleSheet, ScrollView, ActivityIndicator, Alert } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Modal, StyleSheet, ScrollView, ActivityIndicator } from 'react-native';
+import { notify } from '../services/notify';
 import { logWellnessData } from '../services/api';
 
 function calcScore({ workHours, meetingHours, focusHours, breaksToday, emailSentiment, lateNightWork }) {
@@ -30,7 +31,7 @@ export default function LogDataModal({ visible, onClose, onSaved }) {
   });
 
   const handleSave = async () => {
-    if (!workHours) return Alert.alert('Missing', 'Please enter work hours');
+    if (!workHours) return notify('Missing', 'Please enter work hours');
     setSaving(true);
     try {
       await logWellnessData({
@@ -49,7 +50,7 @@ export default function LogDataModal({ visible, onClose, onSaved }) {
       });
     } catch (e) {
       console.log('Save error:', e);
-      Alert.alert('Error', 'Could not save. Is the backend running?');
+      notify('Error', 'Could not save your log. Please try again.');
     } finally {
       setSaving(false);
     }

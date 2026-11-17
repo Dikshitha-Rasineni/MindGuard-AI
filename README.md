@@ -73,31 +73,38 @@ MindGuard-AI/
 
 ---
 
-## Installation
-
-### Clone the repository
+## Running locally
 
 ```bash
 git clone https://github.com/Dikshitha-Rasineni/MindGuard-AI.git
-```
-
-### Navigate to the project
-
-```bash
 cd MindGuard-AI
-```
-
-### Install dependencies
-
-```bash
 npm install
+cp backend/.env.example backend/.env     # put your MongoDB URI and a JWT secret in it
+npm run seed:demo                        # demo@mindguard.app / mindguard-demo with 14 days of data
+npm run api                              # backend on http://localhost:3000
+EXPO_PUBLIC_API_URL=http://localhost:3000 npm run web   # web app, or `npm start` for Expo Go
 ```
 
-### Start the application
+For Expo Go on a phone, set `EXPO_PUBLIC_API_URL` to your laptop's LAN address (e.g. `http://192.168.1.5:3000`)
+or to the hosted API (`https://<your-app>.vercel.app/api`).
 
-```bash
-npm start
-```
+## Deployment (Vercel)
+
+The web app and the API deploy together as one Vercel project: `npx expo export -p web` builds the site into `dist/`,
+and `api/index.js` runs the Express backend as a serverless function under `/api` (see `vercel.json`).
+
+1. Create a free MongoDB Atlas cluster. In **Network Access** allow `0.0.0.0/0` (Vercel has no fixed IP).
+2. Import the repo in Vercel (root directory: repo root, no framework preset).
+3. Add environment variables `MONGO_URI` and `JWT_SECRET`, then deploy.
+4. Run `npm run seed:demo` locally with the same `MONGO_URI` in `backend/.env` to create the demo account.
+
+## Accounts and passwords
+
+- New users can sign up from the **Create Account** tab on the login screen.
+- Demo login (after seeding): `demo@mindguard.app` / `mindguard-demo` (change with `DEMO_PASSWORD=...`).
+- Forgot a password? Passwords are hashed and can't be recovered, but you can set a new one:
+  `npm run reset-password -- you@example.com newPassword123` (uses `MONGO_URI` from `backend/.env`).
+  If the email isn't found, the script lists the accounts that exist.
 
 ---
 

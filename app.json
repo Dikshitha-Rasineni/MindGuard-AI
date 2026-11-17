@@ -1,0 +1,15 @@
+{
+  "expo": {
+    "name": "MindGuard AI",
+    "slug": "mindguard-ai",
+    "scheme": "mindguard",
+    "version": "1.0.0",
+    "icon": "./assets/images/icon.png",
+    "userInterfaceStyle": "automatic",
+    "web": {
+      "output": "single",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": ["expo-router"]
+  }
+}
